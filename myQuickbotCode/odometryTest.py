@@ -9,4 +9,4 @@ while True:
     value_l = ADC.read(config.Ol)
     value_r = ADC.read(config.Or)
 
-    print("left: " + string(value_l) + "right: " + string(value_r))
+    print("left: " + str(value_l) + "right: " + str(value_r))
