@@ -16,5 +16,5 @@ while True:
     reading3 = ADC.read(sensor3)
     reading4 = ADC.read(sensor4)
     reading5 = ADC.read(sensor5)
-    print("reading1 " + str(reading1))
+    print("reading5 " + str(reading5))
     time.sleep(0.05)
