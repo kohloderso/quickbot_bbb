@@ -37,9 +37,9 @@ while not obstacle:
     reading1 = ADC.read(config.IRfl)
     reading2 = ADC.read(config.IRfr)
     reading3 = ADC.read(config.IRfm)
-    print("sensor left " + reading1)
-    print("sensor right " + reading2)
-    print("sensor middle " + reading3)
+    print("sensor left " + str(reading1))
+    print("sensor right " + str(reading2))
+    print("sensor middle " + str(reading3))
 
     if max(reading1, reading2, reading3) > 0.3:
         obstacle = True
