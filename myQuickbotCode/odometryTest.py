@@ -6,8 +6,8 @@ import time
 
 ADC.setup()
 while True:
-    value_l = ADC.read(config.Ol)
-    value_r = ADC.read(config.Or)
+    value_l = ADC.read_raw(config.Ol)
+    value_r = ADC.read_raw(config.Or)
 
     print("left: " + str(value_l) + "right: " + str(value_r))
     time.sleep(1)
