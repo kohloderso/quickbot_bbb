@@ -10,3 +10,4 @@ while True:
     value_r = ADC.read(config.Or)
 
     print("left: " + str(value_l) + "right: " + str(value_r))
+    time.sleep(1)
