@@ -46,7 +46,7 @@ PWM.start(pwmPin[RIGHT], 0)#, frequency=frequency)
 
 middleIR = 0
 
-while middleIR < 0.6:
+while middleIR < 0.5:
     leftIR = ADC.read(config.IRfl)
     rightIR = ADC.read(config.IRfr)
     middleIR = ADC.read(config.IRfm)
@@ -54,11 +54,11 @@ while middleIR < 0.6:
     print("sensor right " + str(rightIR))
     print("sensor middle " + str(middleIR))
 
-    if rightIR > 0.5:
+    if rightIR > 0.3:
         GPIO.output(dir1Pin[LEFT], GPIO.HIGH)
         GPIO.output(dir2Pin[LEFT], GPIO.LOW)
         PWM.set_duty_cycle(pwmPin[LEFT], 50)
-    elif leftIR > 0.5:
+    elif leftIR > 0.3:
         GPIO.output(dir1Pin[RIGHT], GPIO.HIGH)
         GPIO.output(dir2Pin[RIGHT], GPIO.LOW)
         PWM.set_duty_cycle(pwmPin[RIGHT], 50)
