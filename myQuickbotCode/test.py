@@ -23,15 +23,15 @@ GPIO.setup(dir2Pin[RIGHT], GPIO.OUT)
 PWM.start(pwmPin[LEFT], 0)#, frequency=frequency)
 PWM.start(pwmPin[RIGHT], 0)#, frequency=frequency)
 
-"""left motor forward?"""
+
 GPIO.output(dir1Pin[LEFT], GPIO.HIGH)
 GPIO.output(dir2Pin[LEFT], GPIO.LOW)
 PWM.set_duty_cycle(pwmPin[LEFT], 50)
-GPIO.output(dir1Pin[RIGHT], GPIO.HIGH)
-GPIO.output(dir2Pin[RIGHT], GPIO.LOW)
+GPIO.output(dir1Pin[RIGHT], GPIO.LOW)
+GPIO.output(dir2Pin[RIGHT], GPIO.HIGH)
 PWM.set_duty_cycle(pwmPin[RIGHT], 50)
 
-time.sleep(1)
+time.sleep(5)
 
 PWM.stop(pwmPin[LEFT])
 PWM.stop(pwmPin[RIGHT])
