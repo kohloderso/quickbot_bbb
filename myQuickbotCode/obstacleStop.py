@@ -34,11 +34,11 @@ while not obstacle:
     GPIO.output(dir2Pin[RIGHT], GPIO.LOW)
     PWM.set_duty_cycle(pwmPin[RIGHT], 50)
 
-    if ADC.read(config.IRfl > 0.3):
+    if ADC.read(config.IRfl) > 0.3:
         obstacle = True
-    elif ADC.read(config.IRfr > 0.3):
+    elif ADC.read(config.IRfr) > 0.3:
         obstacle = True
-    elif ADC.read(config.IRfm > 0.3):
+    elif ADC.read(config.IRfm) > 0.3:
         obstacle = True
 
 PWM.stop(pwmPin[LEFT])
