@@ -57,18 +57,18 @@ while middleIR < 0.5:
     if rightIR > 0.3:
         GPIO.output(dir1Pin[LEFT], GPIO.HIGH)
         GPIO.output(dir2Pin[LEFT], GPIO.LOW)
-        PWM.set_duty_cycle(pwmPin[LEFT], 50)
+        PWM.set_duty_cycle(pwmPin[LEFT], 30)
     elif leftIR > 0.3:
         GPIO.output(dir1Pin[RIGHT], GPIO.HIGH)
         GPIO.output(dir2Pin[RIGHT], GPIO.LOW)
-        PWM.set_duty_cycle(pwmPin[RIGHT], 50)
+        PWM.set_duty_cycle(pwmPin[RIGHT], 30)
     else:
         GPIO.output(dir1Pin[LEFT], GPIO.HIGH)
         GPIO.output(dir2Pin[LEFT], GPIO.LOW)
-        PWM.set_duty_cycle(pwmPin[LEFT], 50)
+        PWM.set_duty_cycle(pwmPin[LEFT], 30)
         GPIO.output(dir1Pin[RIGHT], GPIO.HIGH)
         GPIO.output(dir2Pin[RIGHT], GPIO.LOW)
-        PWM.set_duty_cycle(pwmPin[RIGHT], 50)
+        PWM.set_duty_cycle(pwmPin[RIGHT], 30)
     time.sleep(2)
 
 PWM.stop(pwmPin[LEFT])
