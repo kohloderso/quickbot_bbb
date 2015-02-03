@@ -16,16 +16,16 @@
 #               ++++++++++++++++++
 #
 # ir
-IRbl = "P9_38"
+#IRbl = "P9_38"
 IRfl = "P9_40"
-IRfm = "P9_36"
-IRfr = "P9_35"
-IRbr = "P9_33"
-IRS = (IRbl, IRfl, IRfm, IRfr, IRbr)
+IRfm = "P9_38"
+IRfr = "P9_36"
+#IRbr = "P9_33"
+#IRS = (IRbl, IRfl, IRfm, IRfr, IRbr)
 
 # encoder aka odometry
-Ol = "P9_39"
-Or = "P9_37"
+Or = "P9_39"
+Ol = "P9_37"
 
 # motors
 INl1 = "P8_14"
