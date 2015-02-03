@@ -27,6 +27,9 @@ PWM.start(pwmPin[RIGHT], 0)#, frequency=frequency)
 GPIO.output(dir1Pin[LEFT], GPIO.LOW)
 GPIO.output(dir2Pin[LEFT], GPIO.HIGH)
 PWM.set_duty_cycle(pwmPin[LEFT], 100)
+GPIO.output(dir1Pin[RIGHT], GPIO.LOW)
+GPIO.output(dir2Pin[RIGHT], GPIO.HIGH)
+PWM.set_duty_cycle(pwmPin[RIGHT], 100)
 
 time.sleep(1)
 
