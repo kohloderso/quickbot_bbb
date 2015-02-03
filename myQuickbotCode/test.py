@@ -30,3 +30,5 @@ PWM.set_duty_cycle(pwmPin[LEFT], 100)
 PWM.stop(pwmPin[LEFT])
 PWM.stop(pwmPin[RIGHT])
 PWM.cleanup()
+
+GPIO.cleanup()
