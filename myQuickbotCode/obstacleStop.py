@@ -41,8 +41,26 @@ while not obstacle:
     print("sensor right " + str(reading2))
     print("sensor middle " + str(reading3))
 
-    if max(reading1, reading2, reading3) > 0.3:
+    if max(reading1, reading2, reading3) > 0.5:
         obstacle = True
+
+# while True:
+#     leftIR = ADC.read(config.IRfl)
+#     rightIR = ADC.read(config.IRfr)
+#     middleIR = ADC.read(config.IRfm)
+#     print("sensor left " + str(reading1))
+#     print("sensor right " + str(reading2))
+#     print("sensor middle " + str(reading3))
+#
+#     if leftIR > 0.3:
+#         GPIO.output(dir1Pin[LEFT], GPIO.HIGH)
+#         GPIO.output(dir2Pin[LEFT], GPIO.LOW)
+#         PWM.set_duty_cycle(pwmPin[LEFT], 0)
+#     elif rightIR > 0.3:
+#         GPIO.output(dir1Pin[RIGHT], GPIO.HIGH)
+#         GPIO.output(dir2Pin[RIGHT], GPIO.LOW)
+#         PWM.set_duty_cycle(pwmPin[RIGHT], 0)
+
 
 PWM.stop(pwmPin[LEFT])
 PWM.stop(pwmPin[RIGHT])
