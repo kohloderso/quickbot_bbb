@@ -69,7 +69,7 @@ while middleIR < 0.6:
         GPIO.output(dir1Pin[RIGHT], GPIO.HIGH)
         GPIO.output(dir2Pin[RIGHT], GPIO.LOW)
         PWM.set_duty_cycle(pwmPin[RIGHT], 50)
-
+    time.sleep(2)
 
 PWM.stop(pwmPin[LEFT])
 PWM.stop(pwmPin[RIGHT])
