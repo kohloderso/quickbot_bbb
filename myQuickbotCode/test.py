@@ -2,6 +2,7 @@ import quickbot_config as config
 import Adafruit_BBIO.ADC as ADC
 import Adafruit_BBIO.PWM as PWM
 import Adafruit_BBIO.GPIO as GPIO
+import time
 
 LEFT = 0
 RIGHT = 1
@@ -26,6 +27,8 @@ PWM.start(pwmPin[RIGHT], 0)#, frequency=frequency)
 GPIO.output(dir1Pin[LEFT], GPIO.LOW)
 GPIO.output(dir2Pin[LEFT], GPIO.HIGH)
 PWM.set_duty_cycle(pwmPin[LEFT], 100)
+
+time.sleep(1)
 
 PWM.stop(pwmPin[LEFT])
 PWM.stop(pwmPin[RIGHT])
