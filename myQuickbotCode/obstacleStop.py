@@ -54,12 +54,12 @@ while middleIR < 0.4:
     print("sensor right " + str(rightIR))
     print("sensor middle " + str(middleIR))
 
-    if rightIR > 0.2:
+    if leftIR > 0.2:
         GPIO.output(dir1Pin[LEFT], GPIO.HIGH)
         GPIO.output(dir2Pin[LEFT], GPIO.LOW)
         PWM.set_duty_cycle(pwmPin[LEFT], 50)
         PWM.set_duty_cycle(pwmPin[RIGHT], 0)
-    elif leftIR > 0.2:
+    elif rightIR > 0.2:
         GPIO.output(dir1Pin[RIGHT], GPIO.HIGH)
         GPIO.output(dir2Pin[RIGHT], GPIO.LOW)
         PWM.set_duty_cycle(pwmPin[RIGHT], 50)
