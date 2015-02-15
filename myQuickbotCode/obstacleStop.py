@@ -25,25 +25,6 @@ GPIO.setup(dir2Pin[RIGHT], GPIO.OUT)
 PWM.start(pwmPin[LEFT], 0)#, frequency=frequency)
 PWM.start(pwmPin[RIGHT], 0)#, frequency=frequency)
 
-# obstacle = False
-# while not obstacle:
-#     GPIO.output(dir1Pin[LEFT], GPIO.HIGH)
-#     GPIO.output(dir2Pin[LEFT], GPIO.LOW)
-#     PWM.set_duty_cycle(pwmPin[LEFT], 50)
-#     GPIO.output(dir1Pin[RIGHT], GPIO.HIGH)
-#     GPIO.output(dir2Pin[RIGHT], GPIO.LOW)
-#     PWM.set_duty_cycle(pwmPin[RIGHT], 50)
-#
-#     reading1 = ADC.read(config.IRfl)
-#     reading2 = ADC.read(config.IRfr)
-#     reading3 = ADC.read(config.IRfm)
-#     print("sensor left " + str(reading1))
-#     print("sensor right " + str(reading2))
-#     print("sensor middle " + str(reading3))
-#
-#     if max(reading1, reading2, reading3) > 0.5:
-#         obstacle = True
-
 middleIR = 0
 
 while middleIR < 0.4:
