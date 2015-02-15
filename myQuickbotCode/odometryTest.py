@@ -2,6 +2,7 @@ import quickbot_config as config
 import Adafruit_BBIO.ADC as ADC
 import Adafruit_BBIO.PWM as PWM
 import Adafruit_BBIO.GPIO as GPIO
+import time
 
 GPIO.setup(config.Ol, GPIO.IN)
 GPIO.add_event_detect(config.Ol, GPIO.BOTH) # look for RISING or FALLING
