@@ -4,14 +4,9 @@ import Adafruit_BBIO.PWM as PWM
 import Adafruit_BBIO.GPIO as GPIO
 import time
 
-GPIO.setup(config.Ol, GPIO.IN)
-GPIO.add_event_detect(config.Ol, GPIO.BOTH) # look for RISING or FALLING
-
-if GPIO.event_detected(config.Ol): # Executed in either case
-    print "event left detected!"
-
+ADC.setup()
 while True:
-    print "things happening here"
-    time.sleep(1)
+    value_l = ADC.read(config.Ol)
+    value_r = ADC.read(config.Or)
 
-GPIO.cleanup()
+    print("left: " + string(value_l) + "right: " + string(value_r))
